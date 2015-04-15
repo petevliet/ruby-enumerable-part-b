@@ -1,4 +1,13 @@
-
+def none?(input, &block)
+    zz = []
+    input.each do |item|
+      answer = block.call(item)
+        if answer == true
+          zz << item
+        end
+    end
+    zz.empty?
+end
 
 # ------ code above this line ------
 

@@ -1,4 +1,17 @@
-
+def all?(input, &block)
+  bb = []
+  if !input.empty?
+    input.each do |item|
+      result = block.call(item)
+        if result == false
+          bb << item
+        end
+    end
+    bb == input.count
+  else
+    true
+  end
+end
 
 # ------ code above this line ------
 

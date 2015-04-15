@@ -1,4 +1,12 @@
-
+def find(input, &block)
+  correct = []
+  input.each do |item|
+    if block.call(item) == true
+      correct << item
+    end
+  end
+  correct[0]
+end
 
 # ------ code above this line ------
 
